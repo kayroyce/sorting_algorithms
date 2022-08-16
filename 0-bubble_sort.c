@@ -7,11 +7,11 @@
  */
 void swap_ints(int *a, int *b)
 {
-	int tmp;
+		int tmp;
 
-	tmp = *a;
-	*a = *b;
-	*b = tmp;
+		tmp = *a;
+		*a = *b;
+		*b = tmp;
 }
 
 
@@ -23,27 +23,35 @@ void swap_ints(int *a, int *b)
  */
 void bubble_sort(int *array, size_t size)
 {
-	size_t i, newsize = size;
-	int swap;
+		size_t i, newsize = size;
+		int swap;
 
-	if (array == NULL || size < 2)
-		return;
+		if (array == NULL || size < 2)
+				return;
 
-	while (newsize)
-	{
-		swap = 0;
-		for (i = 0; i < (size - 1); i++)
+		while (newsize)
 		{
-			if (array[i] > array[i + 1])
-			{
-				swap_ints(&array[i], &array[i + 1]);
-				print_array(array, size);
-				swap = 1;
-			}
+				swap = 0;
+				for (i = 0; i < (size - 1); i++)
+				{
+						if (array[i] > array[i + 1])
+						{
+								swap_ints(&array[i], &array[i + 1]);
+								print_array(array, size);
+								swap = 1;
+						}
+				}
+				newsize--;
+				if (swap == 0)
+						break;
 		}
+<<<<<<< HEAD
 		newsize--;
 		if (swap == 0)
 			break;
 	}
 }
 
+=======
+}
+>>>>>>> 688b2119631691214486b38a37adec150ba6026a
