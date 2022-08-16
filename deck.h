@@ -1,13 +1,15 @@
-#ifndef _DECK_H
-#define _DECK_H
+#ifndef __DECK__
+#define __DECK__
+
+#include <stdlib.h>
 
 /**
- * enum kind_e - enumeration of card suits from 0 to 3
- * @SPADE: 0
- * @HEART: 1
- * @CLUB: 2
- * @DIAMOND: 3
- */
+  * enum kind_e - deck's kind.
+  * @SPADE: Spade kind.
+  * @HEART: heart kind.
+  * @CLUB: Club kind.
+  * @DIAMOND: Diamond kind.
+  */
 typedef enum kind_e
 {
 	SPADE = 0,
@@ -43,7 +45,7 @@ typedef struct deck_node_s
 	struct deck_node_s *next;
 } deck_node_t;
 
-void print_deck(const deck_node_t *deck);
 void sort_deck(deck_node_t **deck);
+int main(void);
 
-#endif /* _DECK_H */
+#endif /* __DECK__ */
