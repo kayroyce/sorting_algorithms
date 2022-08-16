@@ -77,3 +77,4 @@ void merge_sort(int *array, size_t size)
 	rec_merge(array, sortArr, 0, size);
 	free(sortArr);
 }
+

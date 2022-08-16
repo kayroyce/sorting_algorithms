@@ -83,3 +83,4 @@ void bitonic_sort(int *array, size_t size)
 
 	bitonic_seq(array, size, 0, size, UP);
 }
+
